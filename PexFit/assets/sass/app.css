@@ -1,0 +1,159 @@
+@charset "UTF-8";
+/* ========== MIXINS =========== */
+/* =========== VARIAVEIS ========= */
+/* ========== CSS DO SITE ======== */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  background: #01558C;
+  padding: 20px;
+  height: 80px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin: 0 10px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.hamburger {
+  display: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+.logo {
+  font-size: 25px;
+  color: white;
+}
+
+.logo-span {
+  font-weight: bold;
+  color: #05BF7D;
+}
+
+.filiais {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  flex-direction: column;
+  width: 100%;
+  background: #04708D;
+  padding: 40px 20px;
+  color: white;
+  gap: 20px;
+}
+
+.filiais-div {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.acad {
+  width: 100%;
+  border: 2px solid #09A67B;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+}
+
+p {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px;
+  background: #09A67B;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.acad-img {
+  width: 100%;
+  height: 400px;
+  background: #01558C;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+}
+
+select {
+  margin-top: 10px;
+  width: 100%;
+  max-width: 300px;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background: #048B7E;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  appearance: none; /* Remove a aparência padrão */
+}
+
+select:focus {
+  outline: none;
+}
+
+/* ========= MEDIA SCREEN ========== */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    display: none;
+    flex-direction: column;
+    background: #01558C;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: 60vh;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+  .hamburger {
+    display: block;
+  }
+}
+/* Para telas menores que 768px → 2 colunas */
+@media screen and (max-width: 768px) {
+  .filiais-div {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* Para telas menores que 480px → 1 coluna */
+@media screen and (max-width: 480px) {
+  .filiais-div {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*# sourceMappingURL=app.css.map */
