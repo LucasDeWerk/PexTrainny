@@ -28,14 +28,14 @@ const dicionarioEquipamentos = {
     "roller": "rolinho",
     "rope": "corda",
     "skierg machine": "máquina skierg",
-    "sled machine": "máquina de trenó",
+    "sled machine": "máquina Leg Press",
     "smith machine": "máquina smith",
     "stability ball": "bola de estabilidade",
     "stationary bike": "bicicleta ergométrica",
     "stepmill machine": "máquina de escada",
     "tire": "pneu",
     "trap bar": "barra hexagonal",
-    "upper body ergometer": "ergômetro de membros superiores",
+    "upper body ergometer": "Membros superiores",
     "weighted": "com peso",
     "wheel roller": "roda abdominal"
 };
@@ -62,7 +62,7 @@ async function fetchEquipamentos() {
                 imgDiv.className = 'acad-img';
                 const img = document.createElement('img');
                 img.className = 'image';
-                img.src = 'assets/img/equipamento.jpg'; // imagem padrão
+                img.src = `../../assets/img/${equipamento}.jpg`; // imagem padrão
 
                 imgDiv.appendChild(img);
                 card.appendChild(p);
